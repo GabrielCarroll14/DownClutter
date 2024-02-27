@@ -15,21 +15,30 @@ with os.scandir(downloads) as entries:
             file_path = os.path.join(downloads, entry.name)
             destination_path = os.path.join(photos_path, entry.name)
             shutil.move(file_path, destination_path)
-            
+            print("Another download has been sorted.")
         elif entry.name.endswith((".txt", ".pdf")) and entry.is_file():
             file_path = os.path.join(downloads, entry.name)
             destination_path = os.path.join(docs_path, entry.name)
             shutil.move(file_path, destination_path)
-            
+            print("Another download has been sorted.")
         elif entry.name.endswith(".mp4") and entry.is_file():
             file_path = os.path.join(downloads, entry.name)
             destination_path = os.path.join(vid_path, entry.name)
             shutil.move(file_path, destination_path)
-            
+            print("Another download has been sorted.")
         elif entry.name.endswith((".mp3", ".wav")) and entry.is_file():
             file_path = os.path.join(downloads, entry.name)
             destination_path = os.path.join(music_path, entry.name)
             shutil.move(file_path, destination_path)
+            print("Another download has been sorted.")
             
-        print("Your downloads has been decluttered!")
+        else:
+            ("This item was not sorted.")
+        
+
+print("You have these items remaining is the downloads folder.") 
+with os.scandir(downloads) as entries:
+    for entry in entries:
+        print (entry)
+                
         
