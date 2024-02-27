@@ -30,4 +30,6 @@ with os.scandir(downloads) as entries:
             file_path = os.path.join(downloads, entry.name)
             destination_path = os.path.join(music_path, entry.name)
             shutil.move(file_path, destination_path)
+            
+        print("Your downloads has been decluttered!")
         
