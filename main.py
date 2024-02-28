@@ -7,7 +7,6 @@ docs_path = r"C:\Users\Gabriel\Documents"
 vid_path = r"C:\Users\Gabriel\Videos"
 music_path = r"C:\Users\Gabriel\Music"
 
-
 with os.scandir(downloads) as entries:
     for entry in entries:
         
